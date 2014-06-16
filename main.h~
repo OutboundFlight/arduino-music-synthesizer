@@ -1,0 +1,37 @@
+#ifndef MAIN_DEF
+#define MAIN_DEF
+#define _BSD_SOURCE
+#define DEBUG_PRINT 1
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <math.h>
+#include <stdint.h>
+#include <endian.h>
+#include <time.h>
+
+#include "StrToFreq.h"
+#include "utility.h"
+#include "FileIO.h"
+#include "UserInterface.h"
+#include "arduino-serial/arduino-serial-lib.h"
+
+#include "StrToFreq.c"
+#include "utility.c"
+#include "FileIO.c"
+#include "UserInterface.c"
+#include "arduino-serial/arduino-serial-lib.c"
+
+extern struct songInfo
+{
+    int MonoStereo;
+    int Tempo;
+    char CommentLine1[64];
+    char CommentLine2[64];
+};
+typedef struct songInfo SongInfo;
+
+#endif
+
