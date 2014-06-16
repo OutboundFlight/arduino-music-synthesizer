@@ -6,7 +6,7 @@
 #define SECONDS_PER_MINUTE 60
 
 float note_table[14];
-float tempo = 200;
+float tempo = 100;
 
 int StrToFreq(const char *, note_t*);
 
